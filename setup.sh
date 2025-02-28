@@ -9,15 +9,15 @@ if [[ -z "$ZSH_VERSION" ]]; then
     sudo apt install zsh
 fi
 
-if [[ ! -d "~/.oh-my-zsh" ]]; then
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
     echo "Installing oh-my-zsh..."
-    sh ~/dotfiles/.oh-my-zsh/install.sh --unattended
+    sh "$HOME/dotfiles/.oh-my-zsh/install.sh" --unattended
 fi
 
-if [[ -d "~/dotfiles" ]]; then
+if [[ -d "$HOME/dotfiles" ]]; then
     # In gitpod, dotfiles are stored in this directory
-    pushd "~/dotfiles"
-        mv .zshrc ~/.zshrc
+    pushd "$HOME/dotfiles"
+        mv .zshrc "$HOME/.zshrc"
     popd
 fi
 

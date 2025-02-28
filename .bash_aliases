@@ -1,10 +1,10 @@
 # TODO: Remove when zsh is working?
-source ~/dotfiles/git/.alias
-source ~/dotfiles/kubernetes/.alias
-source ~/dotfiles/system/.alias
+source "$HOME/dotfiles/git/.alias"
+source "$HOME/dotfiles/kubernetes/.alias"
+source "$HOME/dotfiles/system/.alias"
 
-source ~/dotfiles/kubernetes/.functions
-source ~/dotfiles/system/.functions
+source "$HOME/dotfiles/kubernetes/.functions"
+source "$HOME/dotfiles/system/.functions"
 
-source ~/dotfiles/kubernetes/.env
-source ~/dotfiles/git/.run
+source "$HOME/dotfiles/kubernetes/.env"
+source "$HOME/dotfiles/git/.run"
