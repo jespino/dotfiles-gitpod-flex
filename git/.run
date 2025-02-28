@@ -1,0 +1,29 @@
+git config --global --add --bool push.autoSetupRemote true
+git config --global --add column.ui auto
+git config --global --add branch.sort -committerdate
+git config --global --add tag.sort version:refname
+git config --global --add init.defaultBranch main
+git config --global --add diff.algorithm histogram
+git config --global --add diff.colorMoved plain
+git config --global --add --bool diff.mnemonicPrefix true
+git config --global --add --bool diff.renames true
+git config --global --add push.default simple
+git config --global --add --bool push.followTags true
+git config --global --add --bool fetch.prune true
+git config --global --add --bool fetch.pruneTags true
+git config --global --add --bool fetch.all true
+git config --global --add help.autocorrect prompt
+git config --global --add --bool commit.verbose true
+git config --global --add --bool rerere.enabled true
+git config --global --add --bool rerere.autoupdate true
+git config --global --add core.excludesfile ~/.gitignore
+git config --global --add --bool rebase.autoSquash true
+git config --global --add --bool rebase.autoStash true
+git config --global --add --bool rebase.updateRefs true
+
+# Commented out optional settings
+# git config --global --add --bool core.fsmonitor true
+# git config --global --add --bool core.untrackedCache true
+# git config --global --add merge.conflictstyle zdiff3
+
+git config --global --add --bool pull.rebase true
