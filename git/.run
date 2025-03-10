@@ -9,7 +9,8 @@ git config --global --add --bool diff.mnemonicPrefix true
 git config --global --add --bool diff.renames true
 git config --global --add push.default simple
 git config --global --add --bool push.followTags true
-git config --global --add --bool fetch.prune true
+# Causes unpushed commits to be detected, as local branches are not pruned:
+# git config --global --add --bool fetch.prune true
 git config --global --add --bool fetch.pruneTags true
 git config --global --add --bool fetch.all true
 git config --global --add help.autocorrect prompt
