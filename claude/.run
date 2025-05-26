@@ -1,0 +1,8 @@
+if command -v npm &> /dev/null; then
+    echo "Installing Claude Code..."
+    # Install Claude Code
+    npm install -g @anthropic-ai/claude-code
+    claude config set -g theme dark
+else
+    echo "Skipping claude code install, npm not found"
+fi

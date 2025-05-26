@@ -8,3 +8,4 @@ source "$HOME/dotfiles/system/.functions"
 
 source "$HOME/dotfiles/kubernetes/.env"
 source "$HOME/dotfiles/git/.run"
+source "$HOME/dotfiles/claude/.run"
