@@ -13,7 +13,7 @@ npm install -g @anthropic-ai/claude-code
 claude config set -g theme dark
 
 DEST="$HOME/.claude.json"
-if ! sudo test -f "$DEST"; then
+if [ ! -f "$DEST" ]; then
     echo "📋 Copying Claude config from root..."
     sudo cp /root/.claude.json "$DEST" || {
         echo "ℹ️  No Claude config found in root, skipping copy"
