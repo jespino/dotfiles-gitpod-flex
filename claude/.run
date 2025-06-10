@@ -12,7 +12,7 @@ echo "🚀 Installing Claude Code..."
 npm install -g @anthropic-ai/claude-code
 claude config set -g theme dark
 
-DEST="~/.claude.json"
+DEST="$HOME/.claude.json"
 if ! sudo test -f "$DEST"; then
     echo "📋 Copying Claude config from root..."
     sudo cp /root/.claude.json "$DEST" || {
@@ -21,7 +21,7 @@ if ! sudo test -f "$DEST"; then
     }
 fi
 
-sudo chown "$(id -u):$(id -g)" ~/.claude.json
+sudo chown "$(id -u):$(id -g)" "$DEST"
 
 echo "⚙️  Setting up Claude settings..."
 mkdir -p ~/.claude
