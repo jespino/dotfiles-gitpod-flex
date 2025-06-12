@@ -17,7 +17,7 @@ fi
 if [[ -d "$HOME/dotfiles" ]]; then
     # In gitpod, dotfiles are stored in this directory
     pushd "$HOME/dotfiles"
-        mv .zshrc "$HOME/.zshrc"
+        cp .zshrc "$HOME/.zshrc"
         cp -r .oh-my-zsh/themes/* "$HOME/.oh-my-zsh/themes/"
     popd
 fi

@@ -1,15 +1,15 @@
-if ! command -v npm &> /dev/null; then
-    echo "⚠️  Skipping claude code install, npm not found"
-    return 0
-fi
-
 if command -v claude &> /dev/null; then
     echo "✨ Claude Code is already installed"
-    return 0
+else
+    if ! command -v npm &> /dev/null; then
+        echo "⚠️  Skipping claude code install, npm not found"
+        return 0
+    else
+        echo "🚀 Installing Claude Code..."
+        npm install -g @anthropic-ai/claude-code
+    fi
 fi
 
-echo "🚀 Installing Claude Code..."
-npm install -g @anthropic-ai/claude-code
 claude config set -g theme dark
 
 DEST="$HOME/.claude.json"
