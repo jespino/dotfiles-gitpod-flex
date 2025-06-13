@@ -11,11 +11,6 @@ if [[ -z "$ZSH_VERSION" ]]; then
     sudo apt install zsh
 fi
 
-if [[ -z "$ZSH_VERSION" ]]; then
-    echo "Installing zsh"
-    sudo apt install zsh
-fi
-
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
     echo "Installing oh-my-zsh..."
     sh "$HOME/dotfiles/.oh-my-zsh/install.sh" --unattended
@@ -32,7 +27,8 @@ fi
 mkdir -p $HOME/.config
 cp -r $HOME/dotfiles/nvim $HOME/.config/
 
-sudo apt install neovim
+sudo apt install -y neovim
 alias vim=nvim
+sudo apt install -y postgresql-client
 
 export SHELL=zsh
