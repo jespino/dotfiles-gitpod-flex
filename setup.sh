@@ -3,6 +3,13 @@ set -ex
 
 echo "Setting up dotfiles"
 
+sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
+sudo apt update
+
+if [[ -z "$ZSH_VERSION" ]]; then
+    echo "Installing zsh"
+    sudo apt install zsh
+fi
 
 if [[ -z "$ZSH_VERSION" ]]; then
     echo "Installing zsh"
@@ -21,5 +28,11 @@ if [[ -d "$HOME/dotfiles" ]]; then
         cp -r .oh-my-zsh/themes/* "$HOME/.oh-my-zsh/themes/"
     popd
 fi
+
+mkdir -p $HOME/.config
+cp -r $HOME/dotfiles/nvim $HOME/.config/
+
+sudo apt install neovim
+alias vim=nvim
 
 export SHELL=zsh
